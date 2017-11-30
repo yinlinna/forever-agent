@@ -7,7 +7,7 @@ http代理，它将套接字连接保持在keep-alive请求之间。以前是mik
 ## Source
 [forever-agent.js 源码](https://github.com/request/forever-agent/blob/master/index.js)
 
-[forever-agent.js 源码解读全文注释版]（）
+[forever-agent.js 源码解读全文注释版]（https://github.com/yinlinna/forever-agent/blob/master/forever-agent-0.0.1.js）
 
 ## Article
 
