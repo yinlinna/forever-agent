@@ -156,26 +156,30 @@ function ForeverAgentSSL (options) {
 util.inherits(ForeverAgentSSL, ForeverAgent) // 实现对象间原型继承的函数，确定继承关系，ForeverAgentSSL继承ForeverAgent 
 
 ForeverAgentSSL.prototype.createConnection = createConnectionSSL
+//给ForeverAgentSSL封装一个新方法，createConnectionSSL
 ForeverAgentSSL.prototype.addRequestNoreuse = AgentSSL.prototype.addRequest
-
+//给ForeverAgentSSL封装一个新方法，为AgentSSL.prototype.addRequest
 function createConnectionSSL (port, host, options) {
+//options :<Object> 包含连接详情的选项
+//port:
+//host:
   if (typeof port === 'object') {
-    options = port;
+    options = port;         //port数据类型等于 object，执行此条
   } else if (typeof host === 'object') {
-    options = host;
+    options = host;         //host 数据类型 等于 object ，执行此条
   } else if (typeof options === 'object') {
-    options = options;
+    options = options;      //options 数据类型 等于 object，执行此条
   } else {
-    options = {};
+    options = {};   //为空
   }
 
   if (typeof port === 'number') {
-    options.port = port;
+    options.port = port;   //port数据类型 为 number，执行此条
   }
 
   if (typeof host === 'string') {
-    options.host = host;
+    options.host = host;   // host数据类型 为 string， 执行此条
   }
 
-  return tls.connect(options);
+  return tls.connect(options);  //返回参数
 }
