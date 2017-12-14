@@ -35,6 +35,19 @@ ForeverAgent
 
 - AgentSSL：https服务的代理,安全加密
 
+## 模块
+
+## 函数
+
+getConnectionName：为请求选项的集合获取一个唯一的名称，用来判断一个连接是否可以被复用。 
+
+ForeverAgent
+
+createConnection
+
+removeSocket
+
+
 > ### HTTP代理
 
 www连接请求采用的http协议，所以我们在浏览网页，下载数据（也可采用ftp协议）时就是用http代理。它通常绑定在代理服务器的80、3128、8080等端口上。
